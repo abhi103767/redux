@@ -1,13 +1,21 @@
 import { nanoid } from 'nanoid';
 import React, { useState } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
-import { addToTodo } from '../Redux/Action';
-import { deleteTodo } from '../Redux/Action';
+import { addToTodo, deleteTodo } from '../Redux/todos/action';
+
 import { store } from '../Redux/Store';
 
 function Todo() {
+    console.log('todo is reindering')
     const dispatch = useDispatch();
-    const todos = useSelector((store) => store.todos)
+    const todos = useSelector((store) => store.todos.todos,
+        (perv, cur) => {
+            console.log(perv, cur)
+            if (perv.length === cur.length) {
+                return true;
+            }
+            return false;
+        })
     console.log(todos)
     const [formData, setFormData] = useState({
         id: nanoid(),

@@ -1,13 +1,12 @@
-import { ADD_COUNT, DELETE_TODO, TODO } from "./Action.Types";
-export const reducer = (store,{type, payload}) => {
+import {  DELETE_TODO, TODO } from "../Action.Types";
+const init = {
+    todos : []
+}
+
+export const todoReducer = (store = init,{type, payload}) => {
     console.log(store.todos,payload)
 
     switch(type) {
-
-        case ADD_COUNT :
-            return {
-                        ...store , counter : store.counter + payload 
-                    }
         case TODO : 
         return {
             ...store , todos : [...store.todos, {...payload}]

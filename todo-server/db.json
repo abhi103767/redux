@@ -1,0 +1,34 @@
+{
+  "posts": [
+    {
+      "task": "avinash",
+      "status": false,
+      "id": 1
+    },
+    {
+      "task": "aman",
+      "status": false,
+      "id": 2
+    },
+    {
+      "task": "sachim techanil",
+      "status": false,
+      "id": 3
+    },
+    {
+      "task": "sachinand",
+      "status": false,
+      "id": 4
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

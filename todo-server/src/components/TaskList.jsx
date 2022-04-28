@@ -2,6 +2,7 @@ import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { addToTodo } from '../redux/action'
+import { Link } from 'react-router-dom'
 function TaskList() {
     const dispatch = useDispatch()
     const todos = useSelector((store) => store.todos);
@@ -54,12 +55,14 @@ function TaskList() {
             <button onClick={submit}>submit</button>
             {
                 todos.map((todo) => {
-                    return <div>{todo.task}</div>
+                    return <Link to={`/${todo.id}`} key={todo.id} className='task' >
+                        <div>{todo.task}</div>
+                    </Link>
                 })
             }
 
 
-        </div>
+        </div >
     )
 }
 

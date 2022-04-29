@@ -1,10 +1,15 @@
-import { legacy_createStore as createStore } from "redux";
-import { reducer } from "./reducer";
+import { combineReducers, legacy_createStore as createStore } from "redux";
+import { todoReducer } from "./todo/reducer";
 
-
-const store = createStore(reducer,{
-    todos : []
+const rootReducer = combineReducers({
+    todos : todoReducer
 })
+   
+
+
+
+
+const store = createStore(rootReducer)
 
 
 export {store}

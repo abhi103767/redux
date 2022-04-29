@@ -1,7 +1,10 @@
 import { ADD_TODO } from "./action.types";
 
-
-export const reducer = (store,action) => {
+const init = {
+    todos : []
+}
+ 
+export const todoReducer = (store = init ,action) => {
   console.log(action)
     switch(action.type){
         case ADD_TODO :

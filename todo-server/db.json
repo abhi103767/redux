@@ -1,43 +1,37 @@
 {
   "posts": [
     {
-      "task": "avinash",
+      "task": "",
       "status": false,
-      "id": 1
+      "id": 7
     },
     {
-      "task": "aman",
+      "task": "",
       "status": false,
-      "id": 2
+      "id": 8
     },
     {
-      "task": "sachim techanil",
+      "task": "",
       "status": false,
-      "id": 3
+      "id": 13
     },
     {
-      "task": "sachinand",
+      "task": "",
       "status": false,
-      "id": 4
+      "id": 16
     },
     {
-      "task": "ainash",
+      "task": "Avinash",
       "status": false,
-      "id": 5
+      "id": 17
     },
     {
-      "task": "charu",
+      "task": "leader",
       "status": false,
-      "id": 6
+      "id": 18
     }
   ],
-  "comments": [
-    {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
-    }
-  ],
+  "comments": [],
   "profile": {
     "name": "typicode"
   }

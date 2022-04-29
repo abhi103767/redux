@@ -1,11 +1,11 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { addToTodo } from '../redux/action'
+import { addToTodo } from '../redux/todo/action'
 import { Link } from 'react-router-dom'
 function TaskList() {
     const dispatch = useDispatch()
-    const todos = useSelector((store) => store.todos);
+    const todos = useSelector((store) => store.todos.todos);
     const [isFlag, setIsFlag] = useState(false);
     console.log(todos)
 
@@ -48,6 +48,8 @@ function TaskList() {
         setIsFlag((perv) => !perv);
 
     }
+
+
 
     return (
         <div>
